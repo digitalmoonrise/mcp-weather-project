@@ -1,14 +1,20 @@
 [project]
 name = "weather"
 version = "0.1.0"
-description = "Add your description here"
+description = "Weather MCP server using National Weather Service API"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "mcp[cli]"
+    "mcp[cli]",
+    "httpx"
 ]
 
-[tool.uv.workspace]
-members = [
-    "weather",
-]
+[project.scripts]
+weather = "weather:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["weather"]
