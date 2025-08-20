@@ -30,7 +30,6 @@ This project requires Python 3.10 or higher. The setup uses pyenv for Python ver
 
 1. **Set the local Python version**:
    ```bash
-   cd weather
    pyenv local 3.11.9
    ```
 
@@ -50,6 +49,9 @@ This project requires Python 3.10 or higher. The setup uses pyenv for Python ver
 Once set up, you can use the MCP CLI:
 
 ```bash
+# Activate virtual environment (if not already active)
+source .venv/bin/activate
+
 # Show MCP version
 mcp version
 
