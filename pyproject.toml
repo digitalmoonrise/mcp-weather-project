@@ -7,3 +7,8 @@ requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]"
 ]
+
+[tool.uv.workspace]
+members = [
+    "weather",
+]
